@@ -69,7 +69,12 @@ async function main() {
     await runEdgeScreenshot(`http://localhost:${PORT}/`, heroShot, '1280,950');
     console.log('Captured Hero section:', heroShot);
 
-    // 2. Mascot Preview Studio (/mascot-preview)
+    // 2. Bioconversion & Derivative Products Section (/biokonversi-preview)
+    const biokonversiShot = path.join(SCREENSHOT_DIR, 'bsf_biokonversi_section.png');
+    await runEdgeScreenshot(`http://localhost:${PORT}/biokonversi-preview`, biokonversiShot, '1280,1850');
+    console.log('Captured Biokonversi section:', biokonversiShot);
+
+    // 3. Mascot Preview Studio (/mascot-preview)
     const mascotShot = path.join(SCREENSHOT_DIR, 'wawi_mascot_studio.png');
     await runEdgeScreenshot(`http://localhost:${PORT}/mascot-preview`, mascotShot, '1280,1600');
     console.log('Captured Mascot studio:', mascotShot);
@@ -97,6 +102,7 @@ async function main() {
     // Copy to artifact directory
     if (fs.existsSync(ARTIFACT_DIR)) {
       if (fs.existsSync(heroShot)) fs.copyFileSync(heroShot, path.join(ARTIFACT_DIR, 'hero_section_updated.png'));
+      if (fs.existsSync(biokonversiShot)) fs.copyFileSync(biokonversiShot, path.join(ARTIFACT_DIR, 'bsf_biokonversi_section.png'));
       if (fs.existsSync(mascotShot)) fs.copyFileSync(mascotShot, path.join(ARTIFACT_DIR, 'wawi_mascot_studio.png'));
       if (fs.existsSync(wargaShot)) fs.copyFileSync(wargaShot, path.join(ARTIFACT_DIR, 'warga_dashboard.png'));
       if (fs.existsSync(klasifikasiShot)) fs.copyFileSync(klasifikasiShot, path.join(ARTIFACT_DIR, 'warga_klasifikasi.png'));

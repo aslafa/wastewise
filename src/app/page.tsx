@@ -138,7 +138,7 @@ const ECOSYSTEM_DETAILS: Record<string, EcosystemDetail> = {
     accentColor: '#009B63',
     process:
       'Alur terpadu WasteWise: Warga memilah sampah di rumah -> Armada menjemput dan melakukan penimbangan fisik digital -> Data diverifikasi dan poin diterbitkan -> Material dikonsolidasikan untuk disalurkan ke pengolah UMKM -> Hasil olahan memiliki nilai komersial nyata.',
-    materials: ['Maggot segar pakan ternak', 'Maggot kering tahan simpan', 'Sabun batang minyak maggot', 'Pupuk organik kasgot & POC'],
+    materials: ['Maggot segar pakan ternak', 'Maggot kering tahan simpan', 'Pupuk cair LERIGOT (POC)', 'Pupuk organik kasgot BSF'],
     environmentalImpact:
       'Mewujudkan konsep Zero Waste to Landfill dengan menutup siklus materi sehingga tidak terbuang sia-sia ke TPA.',
     economicValue:
@@ -949,21 +949,21 @@ export default function PublicHomePage() {
                 Bukti Nyata Pengolahan & Produk Biokonversi
               </h3>
               <p className="text-xs text-slate-500 mt-1">
-                Dokumentasi proses nyata dari budidaya larva BSF hingga produk hilirisasi sabun dan pakan bernilai tambah.
+                Dokumentasi proses nyata dari budidaya larva BSF hingga produk hilirisasi pupuk organik dan pakan bernilai tambah.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-              {/* Kolom 1: Foto Larva BSF Sedang Mengurai Sampah */}
+              {/* Kolom 1: Foto Larva BSF Sedang Mengurai Sampah (maggot_mengurai_sampah.jpeg) */}
               <div className="bg-white rounded-3xl border border-emerald-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
-                  <div className="relative h-56 w-full bg-slate-100 overflow-hidden">
+                  <div className="relative h-60 w-full bg-slate-100 overflow-hidden">
                     <Image
-                      src="/images/bsf_larvae_waste.jpg"
-                      alt="Foto Nyata Larva BSF Mengurai Sampah Organik"
+                      src="/images/maggot_mengurai_sampah.jpeg"
+                      alt="Foto Dokumentasi Nyata Larva BSF Aktif Mengurai Sampah Organik"
                       fill
                       unoptimized
-                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      className="object-cover object-center hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-5 space-y-2">
@@ -975,7 +975,7 @@ export default function PublicHomePage() {
                     </div>
                     <h4 className="font-extrabold text-sm text-[#142B36]">Larva BSF Mengurai Sampah</h4>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Ribuan larva BSF secara rakus mendegradasi limbah organik rumah tangga tanpa menimbulkan bau busuk dan mereduksi volume sampah hingga 70%.
+                      Ribuan larva BSF secara aktif dan higienis mendekomposisi limbah organik rumah tangga tanpa menimbulkan bau busuk, mereduksi volume sampah organik hingga 70–80%.
                     </p>
                   </div>
                 </div>
@@ -984,16 +984,16 @@ export default function PublicHomePage() {
                 </div>
               </div>
 
-              {/* Kolom 2: Foto Asli Maggot Siap Panen (Foto User maggot_siap_jadi.jpeg) */}
+              {/* Kolom 2: Foto Asli Maggot Siap Panen (maggot_siap_panen.jpeg) */}
               <div className="bg-white rounded-3xl border border-teal-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
-                  <div className="relative h-56 w-full bg-slate-100 overflow-hidden">
+                  <div className="relative h-60 w-full bg-slate-100 overflow-hidden">
                     <Image
-                      src="/images/maggot_siap_jadi.jpeg"
-                      alt="Foto Asli Hasil Panen Maggot BSF Berkualitas Siap Olah"
+                      src="/images/maggot_siap_panen.jpeg"
+                      alt="Foto Dokumentasi Nyata Biomassa Maggot BSF Siap Panen"
                       fill
                       unoptimized
-                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      className="object-cover object-center hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-5 space-y-2">
@@ -1001,11 +1001,11 @@ export default function PublicHomePage() {
                       <span className="text-[10px] font-bold text-teal-800 bg-teal-100 px-2.5 py-0.5 rounded-md border border-teal-200">
                         Biomassa Segar
                       </span>
-                      <span className="text-[10px] text-slate-500 font-semibold">Produk Diuji Nyata</span>
+                      <span className="text-[10px] text-slate-500 font-semibold">Panen Berkualitas</span>
                     </div>
                     <h4 className="font-extrabold text-sm text-[#142B36]">Biomassa Maggot Siap Panen</h4>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Hasil pemeliharaan menghasilkan maggot segar padat protein (40–45%) yang sangat diminati peternak ayam kampung, bebek, dan pembudidaya ikan lele lokal.
+                      Hasil panen larva maggot segar padat protein (40–45%) yang ditiriskan bersih pada ayakan, siap dipasok sebagai pakan unggas dan budidaya ikan lele lokal.
                     </p>
                   </div>
                 </div>
@@ -1014,33 +1014,33 @@ export default function PublicHomePage() {
                 </div>
               </div>
 
-              {/* Kolom 3: Foto Asli Sabun Batang Minyak Maggot (Foto User produk_maggot.jpeg) */}
-              <div className="bg-white rounded-3xl border border-indigo-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+              {/* Kolom 3: Foto Asli Pupuk Organik Kasgot BSF (kasgot.jpeg) */}
+              <div className="bg-white rounded-3xl border border-amber-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
-                  <div className="relative h-56 w-full bg-slate-100 overflow-hidden">
+                  <div className="relative h-60 w-full bg-slate-100 overflow-hidden">
                     <Image
-                      src="/images/produk_maggot.jpeg"
-                      alt="Foto Asli Sabun Batang Minyak Maggot Hasil Hilirisasi"
+                      src="/images/kasgot.jpeg"
+                      alt="Foto Dokumentasi Nyata Pupuk Organik Kasgot Bekas Maggot BSF"
                       fill
                       unoptimized
-                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      className="object-cover object-center hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-5 space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-indigo-800 bg-indigo-100 px-2.5 py-0.5 rounded-md border border-indigo-200">
-                        Inovasi Hilirisasi
+                      <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-md border border-amber-200">
+                        Pupuk Kasgot Teruji
                       </span>
-                      <span className="text-[10px] text-slate-500 font-semibold">Contoh Produk Nyata</span>
+                      <span className="text-[10px] text-slate-500 font-semibold">100% Organik</span>
                     </div>
-                    <h4 className="font-extrabold text-sm text-[#142B36]">Sabun Batang Minyak Maggot</h4>
+                    <h4 className="font-extrabold text-sm text-[#142B36]">Pupuk Organik Kasgot BSF</h4>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Contoh produk hilirisasi nyata dari ekstraksi lipid maggot yang kaya asam laurat, diformulasikan menjadi sabun batang ramah lingkungan yang lembut di kulit.
+                      Residu media penguraian (frass) dikemas higienis menjadi pupuk organik padat kaya hara makro (N, P, K) untuk menyuburkan tanah dan pertanian warga desa.
                     </p>
                   </div>
                 </div>
-                <div className="p-5 pt-0 text-[11px] font-semibold text-indigo-800 flex items-center gap-1.5 border-t border-slate-100 mx-5 pb-4">
-                  <CheckCircle2 className="h-4 w-4 shrink-0" /> Nilai Tambah Ekonomi Sirkular
+                <div className="p-5 pt-0 text-[11px] font-semibold text-amber-800 flex items-center gap-1.5 border-t border-slate-100 mx-5 pb-4">
+                  <CheckCircle2 className="h-4 w-4 shrink-0" /> Nutrisi Alami Tanpa Kimia Sintetis
                 </div>
               </div>
             </div>
@@ -1064,31 +1064,26 @@ export default function PublicHomePage() {
               {/* Kartu 1: Maggot Segar */}
               <div className="rounded-3xl border border-emerald-200 bg-white p-4.5 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group">
                 <div className="space-y-3.5">
-                  {/* Foto Di Bagian Atas */}
-                  <div className="relative h-44 w-full rounded-2xl overflow-hidden bg-emerald-50 border border-emerald-100">
+                  <div className="relative h-48 w-full rounded-2xl overflow-hidden bg-emerald-50 border border-emerald-100">
                     <Image
-                      src="/images/maggot_siap_jadi.jpeg"
-                      alt="Foto Maggot Segar Pakan Hidup"
+                      src="/images/maggot_siap_panen.jpeg"
+                      alt="Foto Asli Maggot Segar Pakan Hidup"
                       fill
                       unoptimized
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  {/* Label Kategori & Status Di Bawah Foto */}
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
                       Pakan Segar
                     </span>
-                    <span className="text-[10px] text-slate-500 font-semibold">Produk yang Telah Diuji</span>
+                    <span className="text-[10px] text-slate-500 font-semibold">Biomassa Hidup</span>
                   </div>
-                  {/* Nama Produk Jelas */}
                   <h4 className="font-extrabold text-sm text-[#142B36]">Maggot Segar (Pakan Hidup)</h4>
-                  {/* Deskripsi Maksimal 2-3 Baris */}
                   <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
-                    Larva maggot hidup berprotein tinggi (40-45%) sebagai pakan berkualitas untuk ayam kampung dan budidaya ikan lele lokal.
+                    Larva maggot hidup segar berprotein tinggi (40-45%) yang disaring bersih, pakan bernutrisi tinggi untuk unggas dan budidaya ikan lele lokal.
                   </p>
                 </div>
-                {/* Informasi Tambahan Di Bawah */}
                 <div className="pt-3 border-t border-slate-100 text-[10px] text-emerald-800 font-semibold flex items-center gap-1.5 mt-3">
                   <Check className="h-3.5 w-3.5 shrink-0" /> Protein 40–45% Alami
                 </div>
@@ -1097,132 +1092,112 @@ export default function PublicHomePage() {
               {/* Kartu 2: Maggot Kering */}
               <div className="rounded-3xl border border-amber-200 bg-white p-4.5 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group">
                 <div className="space-y-3.5">
-                  {/* Foto Di Bagian Atas */}
-                  <div className="relative h-44 w-full rounded-2xl overflow-hidden bg-amber-50 border border-amber-100">
+                  <div className="relative h-48 w-full rounded-2xl overflow-hidden bg-amber-50 border border-amber-100">
                     <Image
-                      src="/images/maggot_kering.jpg"
-                      alt="Foto Maggot BSF Kering Tahan Simpan"
+                      src="/images/maggot_kering.jpeg"
+                      alt="Foto Asli Maggot BSF Kering Tahan Simpan dalam Toples"
                       fill
                       unoptimized
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  {/* Label Kategori & Status Di Bawah Foto */}
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md">
                       Pakan Kering
                     </span>
-                    <span className="text-[10px] text-slate-500 font-semibold">Contoh Produk</span>
+                    <span className="text-[10px] text-slate-500 font-semibold">Tahan Simpan</span>
                   </div>
-                  {/* Nama Produk Jelas */}
                   <h4 className="font-extrabold text-sm text-[#142B36]">Maggot Kering (Dried BSF)</h4>
-                  {/* Deskripsi Maksimal 2-3 Baris */}
                   <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
-                    Maggot hasil pengeringan higienis dengan kadar air rendah sehingga awet disimpan lama untuk pakan burung kicau dan ikan hias.
+                    Maggot hasil pengeringan higienis berkadar air rendah dalam kemasan toples kedap udara, awet disimpan lama untuk pakan burung kicau dan ikan hias.
                   </p>
                 </div>
-                {/* Informasi Tambahan Di Bawah */}
                 <div className="pt-3 border-t border-slate-100 text-[10px] text-amber-800 font-semibold flex items-center gap-1.5 mt-3">
                   <SunMedium className="h-3.5 w-3.5 shrink-0" /> Awet & Kadar Air Rendah
                 </div>
               </div>
 
-              {/* Kartu 3: Minyak Maggot */}
-              <div className="rounded-3xl border border-purple-200 bg-white p-4.5 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group">
-                <div className="space-y-3.5">
-                  {/* Foto / Ilustrasi Di Bagian Atas */}
-                  <div className="relative h-44 w-full rounded-2xl overflow-hidden bg-purple-50 border border-purple-100">
-                    <Image
-                      src="/images/minyak_maggot.svg"
-                      alt="Ilustrasi Botol Minyak Ekstraksi Maggot BSF"
-                      fill
-                      unoptimized
-                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  {/* Label Kategori & Status Di Bawah Foto */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold text-purple-800 bg-purple-100 px-2 py-0.5 rounded-md">
-                      Ekstraksi Lipid
-                    </span>
-                    <span className="text-[10px] text-purple-700 font-semibold">Ilustrasi Potensi Produk</span>
-                  </div>
-                  {/* Nama Produk Jelas */}
-                  <h4 className="font-extrabold text-sm text-[#142B36]">Minyak Maggot BSF</h4>
-                  {/* Deskripsi Maksimal 2-3 Baris */}
-                  <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
-                    Ekstraksi lipid dari biomassa maggot kaya asam laurat alami untuk bahan baku formulasi industri kosmetik dan pembersih.
-                  </p>
-                </div>
-                {/* Informasi Tambahan Di Bawah */}
-                <div className="pt-3 border-t border-slate-100 text-[10px] text-purple-800 font-semibold flex items-center gap-1.5 mt-3">
-                  <Droplets className="h-3.5 w-3.5 shrink-0" /> Kaya Asam Laurat Alami
-                </div>
-              </div>
-
-              {/* Kartu 4: Sabun Batang Minyak Maggot */}
-              <div className="rounded-3xl border border-indigo-200 bg-white p-4.5 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group">
-                <div className="space-y-3.5">
-                  {/* Foto Di Bagian Atas (Foto Asli Lampiran User) */}
-                  <div className="relative h-44 w-full rounded-2xl overflow-hidden bg-indigo-50 border border-indigo-100">
-                    <Image
-                      src="/images/produk_maggot.jpeg"
-                      alt="Foto Asli Sabun Batang Berbahan Minyak Maggot"
-                      fill
-                      unoptimized
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  {/* Label Kategori & Status Di Bawah Foto */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold text-indigo-800 bg-indigo-100 px-2 py-0.5 rounded-md">
-                      Hilirisasi Perawatan
-                    </span>
-                    <span className="text-[10px] text-slate-500 font-semibold">Contoh Produk Nyata</span>
-                  </div>
-                  {/* Nama Produk Jelas */}
-                  <h4 className="font-extrabold text-sm text-[#142B36]">Sabun Batang Minyak Maggot</h4>
-                  {/* Deskripsi Maksimal 2-3 Baris */}
-                  <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
-                    Inovasi produk hilirisasi nyata berupa sabun batang berbahan minyak maggot alami yang lembut di kulit dan ramah lingkungan.
-                  </p>
-                </div>
-                {/* Informasi Tambahan Di Bawah */}
-                <div className="pt-3 border-t border-slate-100 text-[10px] text-indigo-800 font-semibold flex items-center gap-1.5 mt-3">
-                  <Sparkles className="h-3.5 w-3.5 shrink-0" /> Formulasi Lembut Ramah Lingkungan
-                </div>
-              </div>
-
-              {/* Kartu 5: Kasgot / Pupuk Organik */}
+              {/* Kartu 3: LERIGOT (Pupuk Cair BSF) */}
               <div className="rounded-3xl border border-teal-200 bg-white p-4.5 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group">
                 <div className="space-y-3.5">
-                  {/* Foto Di Bagian Atas */}
-                  <div className="relative h-44 w-full rounded-2xl overflow-hidden bg-teal-50 border border-teal-100">
+                  <div className="relative h-48 w-full rounded-2xl overflow-hidden bg-teal-50 border border-teal-100">
                     <Image
-                      src="/images/bsf_frass_kasgot.jpg"
-                      alt="Foto Asli Pupuk Kasgot Frass Bekas Maggot"
+                      src="/images/lerigot.jpeg"
+                      alt="Foto Asli Botol Pupuk Organik Cair LERIGOT Hasil Biokonversi Maggot"
                       fill
                       unoptimized
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  {/* Label Kategori & Status Di Bawah Foto */}
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold text-teal-800 bg-teal-100 px-2 py-0.5 rounded-md">
-                      Pupuk Organik
+                      Pupuk Cair POC
                     </span>
-                    <span className="text-[10px] text-slate-500 font-semibold">Produk yang Dihasilkan</span>
+                    <span className="text-[10px] text-teal-700 font-semibold">Inovasi Fermentasi</span>
                   </div>
-                  {/* Nama Produk Jelas */}
-                  <h4 className="font-extrabold text-sm text-[#142B36]">Kasgot & Pupuk Organik</h4>
-                  {/* Deskripsi Maksimal 2-3 Baris */}
+                  <h4 className="font-extrabold text-sm text-[#142B36]">LERIGOT (Pupuk Cair BSF)</h4>
                   <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
-                    Residu organik sisa media biokonversi kaya unsur hara makro untuk pupuk padat serta potensi pupuk organik cair penyubur tanah.
+                    Inovasi pupuk organik cair (POC) hasil fermentasi leri dan cairan biokonversi maggot yang kaya mikroorganisme baik serta enzim penyubur tanaman hortikultura.
                   </p>
                 </div>
-                {/* Informasi Tambahan Di Bawah */}
                 <div className="pt-3 border-t border-slate-100 text-[10px] text-teal-800 font-semibold flex items-center gap-1.5 mt-3">
-                  <Sprout className="h-3.5 w-3.5 shrink-0" /> Nutrisi Makro Kasgot Alami
+                  <Droplets className="h-3.5 w-3.5 shrink-0" /> Kaya Enzim & Mikroba Alami
+                </div>
+              </div>
+
+              {/* Kartu 4: Kasgot (Pupuk Organik Padat) */}
+              <div className="rounded-3xl border border-amber-200 bg-white p-4.5 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="space-y-3.5">
+                  <div className="relative h-48 w-full rounded-2xl overflow-hidden bg-amber-50 border border-amber-100">
+                    <Image
+                      src="/images/kasgot.jpeg"
+                      alt="Foto Asli Pupuk Kasgot Bekas Maggot BSF Kemasan Toples"
+                      fill
+                      unoptimized
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md">
+                      Pupuk Padat
+                    </span>
+                    <span className="text-[10px] text-slate-500 font-semibold">Nutrisi Makro</span>
+                  </div>
+                  <h4 className="font-extrabold text-sm text-[#142B36]">Kasgot (Pupuk Organik Padat)</h4>
+                  <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
+                    Pupuk bekas maggot (frass) berkualitas tinggi dengan kandungan nitrogen, fosfor, dan kalium seimbang untuk meningkatkan kesuburan tanah gembur.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 text-[10px] text-amber-800 font-semibold flex items-center gap-1.5 mt-3">
+                  <Sprout className="h-3.5 w-3.5 shrink-0" /> Unsur Hara N-P-K Lengkap
+                </div>
+              </div>
+
+              {/* Kartu 5: Larva Pengurai (Dekomposer) */}
+              <div className="rounded-3xl border border-emerald-200 bg-white p-4.5 shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="space-y-3.5">
+                  <div className="relative h-48 w-full rounded-2xl overflow-hidden bg-emerald-50 border border-emerald-100">
+                    <Image
+                      src="/images/maggot_mengurai_sampah.jpeg"
+                      alt="Foto Asli Koloni Larva BSF Aktif Mengurai Sampah Organik"
+                      fill
+                      unoptimized
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
+                      Biokonversi Aktif
+                    </span>
+                    <span className="text-[10px] text-slate-500 font-semibold">Dekomposer Sampah</span>
+                  </div>
+                  <h4 className="font-extrabold text-sm text-[#142B36]">Larva Pengurai (Dekomposer)</h4>
+                  <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
+                    Koloni larva BSF aktif pengurai sisa makanan rumah tangga secara mandiri di bank sampah maupun pekarangan warga, mereduksi sampah basah tanpa bau.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 text-[10px] text-emerald-800 font-semibold flex items-center gap-1.5 mt-3">
+                  <Sparkles className="h-3.5 w-3.5 shrink-0" /> Reduksi Sampah Basah 70–80%
                 </div>
               </div>
             </div>
