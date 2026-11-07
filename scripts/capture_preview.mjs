@@ -2,9 +2,10 @@ import { spawn } from 'child_process';
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 
 const EDGE_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-const PORT = 3499;
+const PORT = 3560;
 const SCREENSHOT_DIR = path.resolve('web/public/screenshots');
 const ARTIFACT_DIR = 'C:\\Users\\Asus\\.gemini\\antigravity\\brain\\11805a7f-5b19-4a17-9f7f-848852033444';
 
@@ -12,41 +13,28 @@ if (!fs.existsSync(SCREENSHOT_DIR)) {
   fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
 }
 
-function waitForServer(url, timeout = 90000) {
-  const start = Date.now();
-  return new Promise((resolve, reject) => {
-    const check = () => {
-      http.get(url, (res) => {
-        if (res.statusCode && res.statusCode < 400) {
-          resolve();
-        } else {
-          setTimeout(check, 800);
-        }
-      }).on('error', (err) => {
-        if (Date.now() - start > timeout) {
-          reject(new Error(`Server start timed out after ${timeout}ms: ${err.message}`));
-        } else {
-          setTimeout(check, 800);
-        }
-      });
-    };
-    check();
-  });
-}
-
 function delay(ms) {
   return new Promise((res) => setTimeout(res, ms));
 }
 
+function preloadUrl(url) {
+  return new Promise((resolve) => {
+    http.get(url, (res) => {
+      res.resume();
+      resolve();
+    }).on('error', () => resolve());
+  });
+}
+
 function runEdgeScreenshot(url, outputPath, windowSize = '1280,1800') {
   return new Promise((resolve, reject) => {
+    const tmpDir = path.join(os.tmpdir(), `edge_prof_${Math.floor(Math.random() * 100000)}`);
     const args = [
-      '--headless=new',
-      '--no-sandbox',
+      '--headless',
       '--disable-gpu',
-      '--disable-dev-shm-usage',
+      `--user-data-dir=${tmpDir}`,
       `--window-size=${windowSize}`,
-      `--virtual-time-budget=3000`,
+      `--virtual-time-budget=6000`,
       `--screenshot=${outputPath}`,
       url,
     ];
@@ -59,8 +47,8 @@ function runEdgeScreenshot(url, outputPath, windowSize = '1280,1800') {
 }
 
 async function main() {
-  console.log('Starting Next.js production server on port', PORT);
-  const nextServer = spawn('node', ['node_modules/next/dist/bin/next', 'start', '-p', String(PORT)], {
+  console.log('Starting Next.js dev server on port', PORT);
+  const nextServer = spawn('npx', ['next', 'dev', '-p', String(PORT)], {
     cwd: path.resolve('web'),
     shell: true,
   });
@@ -69,8 +57,11 @@ async function main() {
   nextServer.stderr.on('data', (d) => console.error('[Next ERR]', d.toString().trim()));
 
   try {
-    console.log('Waiting 5 seconds for Next.js server to be fully ready...');
-    await delay(5000);
+    console.log('Waiting 7 seconds for Next.js dev server to be fully ready...');
+    await delay(7000);
+    console.log('Preloading page to trigger compilation...');
+    await preloadUrl(`http://localhost:${PORT}/`);
+    await delay(4000);
     console.log('Server is ready! Capturing screenshots...');
 
     // 1. Updated Hero Section
@@ -105,12 +96,10 @@ async function main() {
 
     // Copy to artifact directory
     if (fs.existsSync(ARTIFACT_DIR)) {
-      fs.copyFileSync(heroShot, path.join(ARTIFACT_DIR, 'hero_section_updated.png'));
-      fs.copyFileSync(mascotShot, path.join(ARTIFACT_DIR, 'wawi_mascot_studio.png'));
-      fs.copyFileSync(wargaShot, path.join(ARTIFACT_DIR, 'warga_dashboard.png'));
-      fs.copyFileSync(klasifikasiShot, path.join(ARTIFACT_DIR, 'warga_klasifikasi.png'));
-      fs.copyFileSync(petugasShot, path.join(ARTIFACT_DIR, 'petugas_tugas.png'));
-      fs.copyFileSync(adminShot, path.join(ARTIFACT_DIR, 'admin_penjemputan.png'));
+      if (fs.existsSync(heroShot)) fs.copyFileSync(heroShot, path.join(ARTIFACT_DIR, 'hero_section_updated.png'));
+      if (fs.existsSync(mascotShot)) fs.copyFileSync(mascotShot, path.join(ARTIFACT_DIR, 'wawi_mascot_studio.png'));
+      if (fs.existsSync(wargaShot)) fs.copyFileSync(wargaShot, path.join(ARTIFACT_DIR, 'warga_dashboard.png'));
+      if (fs.existsSync(klasifikasiShot)) fs.copyFileSync(klasifikasiShot, path.join(ARTIFACT_DIR, 'warga_klasifikasi.png'));
       console.log('Copied screenshots to artifact directory!');
     }
   } catch (err) {
