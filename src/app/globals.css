@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-deep-green: #006b45;
+  --color-emerald-custom: #009b63;
+  --color-fresh-green: #16a765;
+  --color-mint: #ddf7ea;
+  --color-soft-cream: #fff9ed;
+  --color-light-bg: #f3faf6;
+  --color-dark-navy: #142b36;
+  --color-accent-orange: #f59e0b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f3faf6;
+    --foreground: #142b36;
+
+    --card: #ffffff;
+    --card-foreground: #142b36;
+
+    --popover: #ffffff;
+    --popover-foreground: #142b36;
+
+    --primary: #009b63;
+    --primary-foreground: #ffffff;
+    --primary-dark: #006b45;
+
+    --secondary: #ddf7ea;
+    --secondary-foreground: #006b45;
+
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+
+    --accent: #ddf7ea;
+    --accent-foreground: #006b45;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #009b63;
+
+    --radius: 0.875rem;
+
+    /* Waste category badges */
+    --organik: #009b63;
+    --organik-bg: #ddf7ea;
+    --anorganik: #0284c7;
+    --anorganik-bg: #e0f2fe;
+    --b3: #dc2626;
+    --b3-bg: #fee2e2;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-spin,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }

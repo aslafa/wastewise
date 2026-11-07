@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" fill="none">
+  <defs>
+    <linearGradient id="circGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006B45" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#009B63" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="orgBinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#009B63"/>
+      <stop offset="100%" stop-color="#006B45"/>
+    </linearGradient>
+    <linearGradient id="procGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="umkmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <filter id="circShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#006B45" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Shape -->
+  <rect x="20" y="20" width="460" height="310" rx="28" fill="url(#circGrad)"/>
+  <circle cx="250" cy="175" r="130" fill="#ECFDF5" opacity="0.75"/>
+  <ellipse cx="250" cy="275" rx="190" ry="22" fill="#E2E8F0"/>
+
+  <!-- Flow Track: Curved Arrow connecting 4 Stages -->
+  <path d="M95 195 C 130 115, 200 110, 245 155" stroke="#009B63" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+  <path d="M245 155 C 275 195, 335 195, 395 165" stroke="#009B63" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+  <!-- Arrows -->
+  <polygon points="175,123 186,125 180,133" fill="#009B63"/>
+  <polygon points="325,188 335,185 332,196" fill="#009B63"/>
+
+  <!-- 1. TAHAP 1: Tempat Sampah Terpilah (Kiri) -->
+  <g transform="translate(45, 130)" filter="url(#circShadow)">
+    <!-- Bin Base -->
+    <rect x="15" y="35" width="55" height="75" rx="8" fill="url(#orgBinGrad)"/>
+    <!-- Lid -->
+    <rect x="10" y="28" width="65" height="10" rx="3" fill="#004D31"/>
+    <circle cx="42.5" cy="22" r="5" fill="#009B63"/>
+    <!-- Sorting Icon (Leaf + Recycle symbol) -->
+    <circle cx="42.5" cy="62" r="16" fill="#FFFFFF" fill-opacity="0.9"/>
+    <path d="M42.5 54 C37 54 34 60 34 69 C42.5 69 49 66 49 57 Z" fill="#006B45"/>
+    <text x="42.5" y="125" fill="#006B45" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">1. SAMPAH</text>
+    <text x="42.5" y="136" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5" font-weight="semibold" text-anchor="middle">TERPILAH</text>
+  </g>
+
+  <!-- 2. TAHAP 2: Pengolahan & Biokonversi BSF (Tengah-Kiri) -->
+  <g transform="translate(170, 115)" filter="url(#circShadow)">
+    <!-- Processing Unit / Biopond Box -->
+    <rect x="10" y="25" width="70" height="70" rx="14" fill="#FFFFFF" stroke="#009B63" stroke-width="2.5"/>
+    <circle cx="45" cy="60" r="24" fill="#FFF9ED"/>
+    <!-- Gears / Larvae processing -->
+    <g transform="translate(45, 60)">
+      <circle cx="0" cy="0" r="16" fill="url(#procGrad)"/>
+      <circle cx="0" cy="0" r="10" fill="#FFFFFF"/>
+      <path d="M-3 -3 L3 3 M-3 3 L3 -3" stroke="#D97706" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Sprout atop gear -->
+      <path d="M0 -10 Q5 -18 10 -15 Q10 -8 0 -10 Z" fill="#16A765"/>
+    </g>
+    <text x="45" y="110" fill="#D97706" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">2. OLAH</text>
+    <text x="45" y="121" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5" font-weight="semibold" text-anchor="middle">BIOKONVERSI</text>
+  </g>
+
+  <!-- 3. TAHAP 3: Produk Bernilai (Tengah-Kanan) -->
+  <g transform="translate(285, 120)" filter="url(#circShadow)">
+    <rect x="8" y="25" width="68" height="65" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
+    <!-- Product representations: Sabun Bar & Feed Bag -->
+    <!-- Soap bar -->
+    <rect x="18" y="45" width="24" height="16" rx="4" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+    <path d="M22 53 H38" stroke="#D97706" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Kasgot Jar / Bottle -->
+    <path d="M48 40 L58 40 L60 62 L46 62 Z" fill="#DDF7EA" stroke="#009B63" stroke-width="1.5"/>
+    <rect x="49" y="36" width="8" height="4" rx="1" fill="#006B45"/>
+    <!-- Sparkles -->
+    <polygon points="62,30 64,34 68,36 64,38 62,42 60,38 56,36 60,34" fill="#F59E0B"/>
+    <text x="42" y="105" fill="#009B63" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">3. PRODUK</text>
+    <text x="42" y="116" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5" font-weight="semibold" text-anchor="middle">BERNILAI</text>
+  </g>
+
+  <!-- 4. TAHAP 4: Pelaku UMKM / Mitra Usaha (Kanan) -->
+  <g transform="translate(385, 125)" filter="url(#circShadow)">
+    <!-- Shop / Stall Base -->
+    <rect x="8" y="38" width="68" height="52" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="2"/>
+    <!-- Canopy Roof (Awning) -->
+    <path d="M5 38 L15 22 L69 22 L79 38 Z" fill="url(#umkmGrad)"/>
+    <path d="M17 38 L22 22 M33 38 L35 22 M49 38 L49 22 M65 38 L62 22" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.8"/>
+    <!-- Door & Window -->
+    <rect x="18" y="52" width="18" height="38" rx="2" fill="#BAE6FD"/>
+    <rect x="44" y="52" width="22" height="22" rx="3" fill="#E0F2FE" stroke="#0284C7" stroke-width="1"/>
+    <!-- Shop sign label -->
+    <text x="42" y="105" fill="#0284C7" font-family="system-ui, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">4. MITRA</text>
+    <text x="42" y="116" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5" font-weight="semibold" text-anchor="middle">PELAKU UMKM</text>
+  </g>
+
+  <!-- Title Badge on Top -->
+  <g transform="translate(160, 42)">
+    <rect x="0" y="0" width="180" height="26" rx="13" fill="#006B45"/>
+    <text x="90" y="17" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10.5" font-weight="extrabold" text-anchor="middle" letter-spacing="0.5">ALUR EKONOMI SIRKULAR</text>
+  </g>
+</svg>

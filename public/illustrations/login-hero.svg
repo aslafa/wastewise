@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" fill="none">
+  <defs>
+    <linearGradient id="loginEcoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006B45" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#009B63" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#16A765" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DDF7EA"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="loginShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Glowing Circular Orbits -->
+  <circle cx="250" cy="210" r="160" stroke="#DDF7EA" stroke-width="2" stroke-dasharray="6 8" opacity="0.3"/>
+  <circle cx="250" cy="210" r="115" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.4"/>
+
+  <!-- Center Circle Base -->
+  <circle cx="250" cy="210" r="85" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2"/>
+
+  <!-- Center Big Eco Shield with Leaf & Recycling -->
+  <g transform="translate(250, 210)" filter="url(#loginShadow)">
+    <circle cx="0" cy="0" r="56" fill="url(#leafGrad)"/>
+    <!-- WasteWise 3-arrow recycle loop -->
+    <path d="M-18 6 C-24 -8, -10 -28, 4 -28 C16 -28, 28 -14, 24 6 C20 22, -6 28, -18 6 Z" 
+          stroke="#006B45" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M2 -28 L10 -22 L0 -20 Z" fill="#006B45"/>
+    <path d="M24 4 L28 14 L18 10 Z" fill="#006B45"/>
+    <path d="M-18 6 L-26 2 L-18 -4 Z" fill="#006B45"/>
+    <!-- Center Leaf Sprout -->
+    <path d="M-4 12 C-14 -2, 0 -18, 8 -16 C8 -4, 0 12, -4 12 Z" fill="#009B63"/>
+    <path d="M0 12 C6 2, 18 0, 16 -8 C10 -8, 2 4, 0 12 Z" fill="#16A765"/>
+  </g>
+
+  <!-- Floating Metric Pill 1: Warga Terdaftar (Top Left) -->
+  <g transform="translate(130, 95)" filter="url(#loginShadow)">
+    <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="-45" cy="0" r="10" fill="#DDF7EA"/>
+    <text x="-45" y="3.5" fill="#006B45" font-family="system-ui, sans-serif" font-size="10" font-weight="900" text-anchor="middle">✓</text>
+    <text x="12" y="-1" fill="#0F172A" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle">Pemilahan Cerdas</text>
+    <text x="12" y="10" fill="#006B45" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">Didukung AI LiteRT</text>
+  </g>
+
+  <!-- Floating Metric Pill 2: Poin Reward (Right) -->
+  <g transform="translate(370, 160)" filter="url(#loginShadow)">
+    <rect x="-60" y="-18" width="120" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="-42" cy="0" r="10" fill="#FEF3C7"/>
+    <text x="-42" y="3.5" fill="#D97706" font-family="system-ui, sans-serif" font-size="10" font-weight="900" text-anchor="middle">★</text>
+    <text x="10" y="-1" fill="#0F172A" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle">Poin Reward</text>
+    <text x="10" y="10" fill="#D97706" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">Timbangan Riil</text>
+  </g>
+
+  <!-- Floating Metric Pill 3: Armada Penjemputan (Bottom Left) -->
+  <g transform="translate(145, 330)" filter="url(#loginShadow)">
+    <rect x="-65" y="-18" width="130" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="-45" cy="0" r="10" fill="#E0F2FE"/>
+    <text x="-45" y="3.5" fill="#0284C7" font-family="system-ui, sans-serif" font-size="10" font-weight="900" text-anchor="middle">🚚</text>
+    <text x="12" y="-1" fill="#0F172A" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle">Jemput ke Rumah</text>
+    <text x="12" y="10" fill="#0284C7" font-family="system-ui, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">Armada Terjadwal</text>
+  </g>
+</svg>
+

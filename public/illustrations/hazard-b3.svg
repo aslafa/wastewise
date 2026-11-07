@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" fill="none">
+  <defs>
+    <linearGradient id="b3Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEE2E2"/>
+      <stop offset="100%" stop-color="#FFF1F2"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="20" fill="url(#b3Bg)"/>
+
+  <!-- B3: Batteries, Lightbulbs, Chemical Container, Hazard Shield -->
+  <g transform="translate(200, 140)">
+    <!-- Floor shadow -->
+    <ellipse cx="0" cy="55" rx="100" ry="12" fill="#FECACA" opacity="0.6"/>
+
+    <!-- Warning Triangle Centerpiece -->
+    <polygon points="0,-45 45,35 -45,35" fill="#EF4444" rx="8"/>
+    <polygon points="0,-36 36,28 -36,28" fill="#FEE2E2"/>
+    <!-- Exclamation mark in triangle -->
+    <rect x="-3" y="-18" width="6" height="24" rx="3" fill="#B91C1C"/>
+    <circle cx="0" cy="18" r="3.5" fill="#B91C1C"/>
+
+    <!-- Battery (Left) -->
+    <g transform="translate(-60, 20) rotate(-15)">
+      <rect x="-10" y="-24" width="20" height="42" rx="4" fill="#1E293B"/>
+      <!-- Battery terminal -->
+      <rect x="-4" y="-29" width="8" height="5" rx="1.5" fill="#94A3B8"/>
+      <!-- Gold stripe -->
+      <rect x="-10" y="-12" width="20" height="10" fill="#F59E0B"/>
+      <!-- Minus/Plus icons -->
+      <text x="0" y="-4" fill="#1E293B" font-family="system-ui, sans-serif" font-size="8" font-weight="900" text-anchor="middle">+</text>
+      <text x="0" y="10" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9" font-weight="900" text-anchor="middle">-</text>
+    </g>
+
+    <!-- Fluorescent Lightbulb (Right) -->
+    <g transform="translate(62, 20) rotate(15)">
+      <circle cx="0" cy="-10" r="14" fill="#FDE68A" opacity="0.9"/>
+      <path d="M-8 0 L8 0 L6 12 H-6 Z" fill="#E2E8F0"/>
+      <!-- Metal screw base -->
+      <rect x="-6" y="12" width="12" height="6" fill="#94A3B8"/>
+      <line x1="-5" y1="14" x2="5" y2="14" stroke="#475569" stroke-width="1.5"/>
+      <line x1="-5" y1="16" x2="5" y2="16" stroke="#475569" stroke-width="1.5"/>
+    </g>
+
+    <!-- Floating Badges: Karantina DLH & Bahaya -->
+    <g transform="translate(-85, -25)">
+      <rect x="-44" y="-12" width="88" height="24" rx="12" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.5"/>
+      <text x="0" y="4" fill="#B91C1C" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">⚠️ Karantina DLH</text>
+    </g>
+    <g transform="translate(85, -25)">
+      <rect x="-45" y="-12" width="90" height="24" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="1.5"/>
+      <text x="0" y="4" fill="#92400E" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">🚫 Jangan Dicampur</text>
+    </g>
+  </g>
+</svg>
+

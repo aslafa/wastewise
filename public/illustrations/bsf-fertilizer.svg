@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none">
+  <defs>
+    <linearGradient id="bgFertilizer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DDF7EA"/>
+      <stop offset="100%" stop-color="#F3FAF6"/>
+    </linearGradient>
+    <linearGradient id="soilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803D"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" rx="20" fill="url(#bgFertilizer)"/>
+
+  <!-- Fertilizer Bag: Kasgot Padat (Left) -->
+  <g transform="translate(100, 110)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="55" rx="42" ry="10" fill="#006B45" opacity="0.15"/>
+    <!-- Sack Body -->
+    <path d="M -35 50 C -38 10, -32 -25, -20 -38 C 0 -42, 0 -42, 20 -38 C 32 -25, 38 10, 35 50 Z" fill="#FFFFFF" stroke="#006B45" stroke-width="2"/>
+    <path d="M -20 -38 C 0 -46, 0 -46, 20 -38" fill="none" stroke="#009B63" stroke-width="2"/>
+    <!-- Tied top rope -->
+    <ellipse cx="0" cy="-38" rx="8" ry="3" fill="#D97706"/>
+    <!-- Leaf badge on sack -->
+    <circle cx="0" cy="5" r="18" fill="#DDF7EA" stroke="#009B63" stroke-width="1.5"/>
+    <path d="M -6 10 C -12 0, 0 -8, 6 -4 C 6 4, 0 10, -6 10 Z" fill="#006B45"/>
+    <text x="0" y="32" fill="#004D31" font-family="system-ui, sans-serif" font-size="7.5" font-weight="900" text-anchor="middle">PUPUK KASGOT</text>
+  </g>
+
+  <!-- Liquid Fertilizer (POC) Bottle & Plant Sprout (Right) -->
+  <g transform="translate(210, 110)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="55" rx="30" ry="8" fill="#006B45" opacity="0.15"/>
+    <!-- POC Jug / Bottle -->
+    <rect x="-20" y="-10" width="40" height="60" rx="8" fill="#FFFFFF" stroke="#006B45" stroke-width="2"/>
+    <!-- Liquid level -->
+    <rect x="-16" y="8" width="32" height="38" rx="4" fill="#86EFAC" fill-opacity="0.6"/>
+    <!-- Bottle neck & cap -->
+    <rect x="-10" y="-22" width="20" height="12" rx="2" fill="#006B45"/>
+    <!-- Handle -->
+    <path d="M 20 0 C 30 0, 30 25, 20 25" fill="none" stroke="#006B45" stroke-width="2"/>
+    <text x="0" y="28" fill="#004D31" font-family="system-ui, sans-serif" font-size="8" font-weight="900" text-anchor="middle">POC</text>
+
+    <!-- Vibrant Plant Sprout thriving beside -->
+    <g transform="translate(36, 15)">
+      <path d="M 0 35 C 0 15, -10 5, -16 2 C -10 -2, 0 8, 2 35 Z" fill="#22C55E"/>
+      <path d="M 2 25 C 10 15, 18 10, 22 12 C 16 18, 10 22, 2 25 Z" fill="#16A765"/>
+    </g>
+  </g>
+
+  <!-- Tag Pill -->
+  <rect x="65" y="185" width="190" height="22" rx="7" fill="#006B45"/>
+  <text x="160" y="200" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">
+    Pupuk Kasgot Padat & POC
+  </text>
+</svg>

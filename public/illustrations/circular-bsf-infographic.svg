@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <defs>
+    <linearGradient id="bgCanvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3FAF6"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF9ED"/>
+    </linearGradient>
+    <linearGradient id="primaryGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006B45"/>
+      <stop offset="100%" stop-color="#009B63"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="softCardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#006B45" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="960" height="540" rx="24" fill="url(#bgCanvasGrad)" stroke="#D1FAE5" stroke-width="2"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(480, 42)">
+    <rect x="-240" y="-18" width="480" height="36" rx="18" fill="#DDF7EA" stroke="#009B63" stroke-width="1.5"/>
+    <text x="0" y="6" fill="#006B45" font-family="system-ui, sans-serif" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="0.5">
+      INFOGRAFIS EKONOMI SIRKULAR BIOMASA MAGGOT BSF
+    </text>
+  </g>
+
+  <!-- Flow Connector Lines -->
+  <!-- Line from Input to Center Biokonversi -->
+  <path d="M 230 270 C 270 270, 280 270, 320 270" stroke="#009B63" stroke-width="3" stroke-dasharray="6 4"/>
+  <polygon points="325,270 315,264 315,276" fill="#009B63"/>
+
+  <!-- Branch lines from Biokonversi to 4 Output Branches -->
+  <!-- Branch 1: Maggot Segar (Top Right) -->
+  <path d="M 490 240 C 540 240, 560 135, 610 135" stroke="#0D9488" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="615,135 607,130 607,140" fill="#0D9488"/>
+
+  <!-- Branch 2: Maggot Kering (Mid-Top Right) -->
+  <path d="M 490 255 C 540 255, 560 225, 610 225" stroke="#D97706" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="615,225 607,220 607,230" fill="#D97706"/>
+
+  <!-- Branch 3: Minyak & Sabun Batang (Mid-Bottom Right) -->
+  <path d="M 490 285 C 540 285, 560 315, 610 315" stroke="#7C3AED" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="615,315 607,310 607,320" fill="#7C3AED"/>
+
+  <!-- Branch 4: Pupuk Kasgot & POC (Bottom Right) -->
+  <path d="M 490 300 C 540 300, 560 415, 610 415" stroke="#006B45" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <polygon points="615,415 607,410 607,420" fill="#006B45"/>
+
+  <!-- ==================== TAHAP 1: INPUT SAMPAH ORGANIK ==================== -->
+  <g transform="translate(50, 160)" filter="url(#softCardShadow)">
+    <rect width="180" height="220" rx="16" fill="#FFFFFF" stroke="#009B63" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="16" fill="url(#primaryGreenGrad)"/>
+    <rect y="22" width="180" height="16" fill="url(#primaryGreenGrad)"/>
+    <text x="90" y="24" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">
+      1. SAMPAH ORGANIK
+    </text>
+
+    <!-- Visual Food Waste Icon -->
+    <g transform="translate(90, 85)">
+      <!-- Bowl / Waste Bin -->
+      <path d="M -35 15 C -30 35, 30 35, 35 15 Z" fill="#DDF7EA" stroke="#006B45" stroke-width="2"/>
+      <!-- Apple core -->
+      <path d="M -15 12 C -18 0, -8 -5, -4 -2 C 0 -5, 10 0, 7 12 C 3 10, -11 10, -15 12 Z" fill="#EF4444"/>
+      <path d="M -4 -2 L -2 -7" stroke="#78350F" stroke-width="1.5"/>
+      <!-- Carrot / vegetables -->
+      <path d="M 12 14 L 22 -6 L 15 -8 Z" fill="#F97316"/>
+      <path d="M 22 -6 L 25 -10 M 20 -8 L 19 -12" stroke="#22C55E" stroke-width="1.5"/>
+      <!-- Fish skeleton -->
+      <path d="M -22 -2 L -8 6 M -18 0 L -16 6 M -14 -2 L -12 4" stroke="#64748B" stroke-width="1.5"/>
+    </g>
+
+    <!-- Text items -->
+    <text x="90" y="140" fill="#142B36" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Bahan Baku Hulu</text>
+    <text x="90" y="158" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">• Sisa makanan & dapur</text>
+    <text x="90" y="172" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">• Sayuran, buah, kulit buah</text>
+    <text x="90" y="186" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">• Dedaunan & ampas organik</text>
+    <rect x="20" y="196" width="140" height="16" rx="4" fill="#DDF7EA"/>
+    <text x="90" y="208" fill="#006B45" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">Terpilah dari Rumah Warga</text>
+  </g>
+
+  <!-- ==================== TAHAP 2: BIOKONVERSI MAGGOT BSF ==================== -->
+  <g transform="translate(310, 140)" filter="url(#softCardShadow)">
+    <rect width="180" height="260" rx="16" fill="#FFFFFF" stroke="#009B63" stroke-width="2"/>
+    <rect width="180" height="42" rx="16" fill="url(#primaryGreenGrad)"/>
+    <rect y="24" width="180" height="18" fill="url(#primaryGreenGrad)"/>
+    <text x="90" y="26" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">
+      2. BIOKONVERSI BSF
+    </text>
+
+    <!-- Visual Maggot & Fly Illustration -->
+    <g transform="translate(90, 95)">
+      <!-- Biopond basin -->
+      <rect x="-45" y="10" width="90" height="35" rx="8" fill="#FFF9ED" stroke="#D97706" stroke-width="1.5"/>
+      <!-- Substrate -->
+      <path d="M -40 22 Q 0 16 40 22 L 40 38 Q 0 42 -40 38 Z" fill="#D97706" opacity="0.3"/>
+      <!-- Maggot larvae inside biopond -->
+      <g stroke="#78350F" stroke-width="1.2" fill="#FEF3C7">
+        <!-- Larva 1 -->
+        <ellipse cx="-20" cy="26" rx="9" ry="4" transform="rotate(-15 -20 26)"/>
+        <!-- Larva 2 -->
+        <ellipse cx="5" cy="24" rx="11" ry="4.5" transform="rotate(10 5 24)"/>
+        <!-- Larva 3 -->
+        <ellipse cx="25" cy="28" rx="8" ry="3.5" transform="rotate(-25 25 28)"/>
+        <!-- Larva segments -->
+        <line x1="-22" y1="23" x2="-22" y2="29" stroke="#92400E" stroke-width="0.8"/>
+        <line x1="3" y1="20" x2="3" y2="28" stroke="#92400E" stroke-width="0.8"/>
+        <line x1="7" y1="21" x2="7" y2="29" stroke="#92400E" stroke-width="0.8"/>
+      </g>
+      <!-- Black Soldier Fly above -->
+      <g transform="translate(0, -18)">
+        <!-- Fly body -->
+        <ellipse cx="0" cy="0" rx="4" ry="10" fill="#142B36"/>
+        <ellipse cx="0" cy="-10" rx="3" ry="3" fill="#142B36"/>
+        <!-- Translucent Wings -->
+        <ellipse cx="-8" cy="-3" rx="10" ry="4" fill="#93C5FD" fill-opacity="0.6" stroke="#0284C7" stroke-width="0.8" transform="rotate(-30 -8 -3)"/>
+        <ellipse cx="8" cy="-3" rx="10" ry="4" fill="#93C5FD" fill-opacity="0.6" stroke="#0284C7" stroke-width="0.8" transform="rotate(30 8 -3)"/>
+      </g>
+    </g>
+
+    <text x="90" y="160" fill="#142B36" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Hermetia illucens</text>
+    <text x="90" y="178" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">• Mengurai sampah 3-5x bobot</text>
+    <text x="90" y="192" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">• Waktu siklus 14-21 hari</text>
+    <text x="90" y="206" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">• Protein tinggi 40-45%</text>
+    <text x="90" y="220" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">• Lemak biomasa 25-30%</text>
+    
+    <rect x="20" y="232" width="140" height="18" rx="5" fill="#DDF7EA"/>
+    <text x="90" y="244" fill="#006B45" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">Bioproses Bebas Bau & Cepat</text>
+  </g>
+
+  <!-- ==================== TAHAP 3: 4 CABANG PRODUK TURUNAN ==================== -->
+
+  <!-- Cabang 1: Maggot Segar (Pakan Ayam & Lele) -->
+  <g transform="translate(620, 90)" filter="url(#softCardShadow)">
+    <rect width="290" height="85" rx="12" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.5"/>
+    <rect width="6" height="85" rx="3" fill="url(#tealGrad)"/>
+    <!-- Icon Chicken & Catfish -->
+    <g transform="translate(35, 42)">
+      <circle cx="0" cy="0" r="22" fill="#CCFBF1"/>
+      <!-- Chicken head silhouette -->
+      <path d="M -12 6 C -12 -4, -6 -10, 0 -10 C 6 -10, 6 -4, 4 6 Z" fill="#0F766E"/>
+      <polygon points="6,-6 13,-4 6,-2" fill="#F59E0B"/>
+      <circle cx="2" cy="-6" r="1.5" fill="#FFFFFF"/>
+      <!-- Fish tail outline -->
+      <path d="M -10 12 C -2 12, 6 6, 12 12 L 14 8 L 8 10 Z" fill="#0D9488"/>
+    </g>
+    <text x="70" y="26" fill="#0F766E" font-family="system-ui, sans-serif" font-size="12" font-weight="800">A. Maggot Segar (Pakan Hidup)</text>
+    <text x="70" y="44" fill="#142B36" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Pakan Alternatif Ayam & Ikan Lele</text>
+    <text x="70" y="60" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5">Kaya asam amino, memacu laju pertumbuhan unggas & ikan air tawar.</text>
+    <rect x="70" y="66" width="115" height="13" rx="3" fill="#F0FDFA"/>
+    <text x="127" y="75" fill="#0D9488" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle">Substitusi Pakan Pabrikan</text>
+  </g>
+
+  <!-- Cabang 2: Maggot Kering (Pakan Tahan Simpan) -->
+  <g transform="translate(620, 185)" filter="url(#softCardShadow)">
+    <rect width="290" height="85" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="1.5"/>
+    <rect width="6" height="85" rx="3" fill="url(#amberGrad)"/>
+    <!-- Icon Dried Pack -->
+    <g transform="translate(35, 42)">
+      <circle cx="0" cy="0" r="22" fill="#FEF3C7"/>
+      <!-- Dried pouch / bag -->
+      <rect x="-10" y="-12" width="20" height="24" rx="3" fill="#D97706"/>
+      <rect x="-7" y="-7" width="14" height="12" rx="2" fill="#FFFBEB"/>
+      <!-- Maggot larva inside bag -->
+      <ellipse cx="0" cy="-1" rx="4" ry="2" fill="#92400E"/>
+    </g>
+    <text x="70" y="26" fill="#B45309" font-family="system-ui, sans-serif" font-size="12" font-weight="800">B. Maggot Kering (Dried BSF)</text>
+    <text x="70" y="44" fill="#142B36" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Produk Pakan Tahan Simpan</text>
+    <text x="70" y="60" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5">Proses sangrai / microwave drying, kadar air rendah & daya simpan lama.</text>
+    <rect x="70" y="66" width="115" height="13" rx="3" fill="#FEF3C7"/>
+    <text x="127" y="75" fill="#B45309" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle">Komoditas Bernilai Tinggi</text>
+  </g>
+
+  <!-- Cabang 3: Minyak Maggot & Sabun Batang -->
+  <g transform="translate(620, 280)" filter="url(#softCardShadow)">
+    <rect width="290" height="95" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+    <rect width="6" height="95" rx="3" fill="url(#purpleGrad)"/>
+    <!-- Icon Oil Bottle + Soap Bar -->
+    <g transform="translate(35, 47)">
+      <circle cx="0" cy="0" r="22" fill="#EDE9FE"/>
+      <!-- Oil Dropper Bottle -->
+      <rect x="-12" y="-5" width="12" height="18" rx="2" fill="#7C3AED"/>
+      <rect x="-9" y="-11" width="6" height="6" fill="#A78BFA"/>
+      <!-- Soap Bar -->
+      <rect x="2" y="-1" width="15" height="12" rx="3" fill="#DDD6FE" stroke="#6D28D9" stroke-width="1"/>
+      <ellipse cx="9.5" cy="5" rx="4" ry="1.5" fill="#EDE9FE"/>
+    </g>
+    <text x="70" y="24" fill="#6D28D9" font-family="system-ui, sans-serif" font-size="12" font-weight="800">C. Minyak Maggot & Sabun Batang</text>
+    <text x="70" y="42" fill="#142B36" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Ekstraksi Lipid & Inovasi Perawatan Diri</text>
+    <text x="70" y="58" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5">Asam laurat tinggi bermanfaat untuk kelembapan kulit & bahan baku sabun.</text>
+    <rect x="70" y="66" width="130" height="13" rx="3" fill="#EDE9FE"/>
+    <text x="135" y="75" fill="#6D28D9" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle">Contoh Produk Turunan Inovatif</text>
+  </g>
+
+  <!-- Cabang 4: Residu Frass & Pupuk Organik / POC -->
+  <g transform="translate(620, 385)" filter="url(#softCardShadow)">
+    <rect width="290" height="90" rx="12" fill="#FFFFFF" stroke="#006B45" stroke-width="1.5"/>
+    <rect width="6" height="90" rx="3" fill="url(#primaryGreenGrad)"/>
+    <!-- Icon Compost / Plant Sprout -->
+    <g transform="translate(35, 45)">
+      <circle cx="0" cy="0" r="22" fill="#DDF7EA"/>
+      <!-- Pot / Fertilizer bag -->
+      <path d="M -9 12 L -6 2 L 6 2 L 9 12 Z" fill="#006B45"/>
+      <!-- Sprout leaves -->
+      <path d="M 0 2 C -8 -6, -2 -14, 0 -12 C 2 -14, 8 -6, 0 2 Z" fill="#22C55E"/>
+      <path d="M 0 -2 L 0 -12" stroke="#15803D" stroke-width="1"/>
+    </g>
+    <text x="70" y="24" fill="#006B45" font-family="system-ui, sans-serif" font-size="12" font-weight="800">D. Kasgot & Potensi Pupuk POC</text>
+    <text x="70" y="42" fill="#142B36" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Pupuk Kasgot Padat & Nutrisi Cair</text>
+    <text x="70" y="58" fill="#64748B" font-family="system-ui, sans-serif" font-size="8.5">Residu sisa biokonversi (frass) menyuburkan tanah dan pertanian organik.</text>
+    <rect x="70" y="66" width="130" height="13" rx="3" fill="#DDF7EA"/>
+    <text x="135" y="75" fill="#006B45" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle">Pengganti Pupuk Kimiawi</text>
+  </g>
+
+  <!-- Bottom Footer Note -->
+  <g transform="translate(480, 508)">
+    <rect x="-360" y="-14" width="720" height="24" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="0" y="2" fill="#475569" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">
+      🌱 1 Sumber Sampah Organik → 4 Cabang Solusi Bernilai Tinggi (Pakan Hewan, Bahan Sabun Perawatan, & Penyubur Pertanian)
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" fill="none">
+  <defs>
+    <linearGradient id="inorgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#F0F9FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="20" fill="url(#inorgBg)"/>
+
+  <!-- Inorganics: Plastic Bottle, Cardboard Box, Tin Can -->
+  <g transform="translate(200, 140)">
+    <!-- Floor shadow -->
+    <ellipse cx="0" cy="55" rx="100" ry="12" fill="#BAE6FD" opacity="0.6"/>
+
+    <!-- Cardboard Box (Center-Back) -->
+    <g transform="translate(15, 10)">
+      <rect x="-35" y="-35" width="70" height="55" rx="5" fill="#D97706" opacity="0.9"/>
+      <path d="M-35 -35 L-20 -50 H35 L20 -35 Z" fill="#B45309"/>
+      <path d="M35 -35 L50 -50 V5 L35 20 Z" fill="#92400E"/>
+      <!-- Tape on Box -->
+      <line x1="-35" y1="-7" x2="35" y2="-7" stroke="#FEF3C7" stroke-width="4"/>
+    </g>
+
+    <!-- Plastic Bottle PET (Left-Front) -->
+    <g transform="translate(-45, 15)">
+      <rect x="-14" y="-35" width="28" height="60" rx="8" fill="#38BDF8" opacity="0.9"/>
+      <rect x="-7" y="-45" width="14" height="10" rx="3" fill="#0284C7"/>
+      <!-- Cap -->
+      <rect x="-8" y="-50" width="16" height="5" rx="2" fill="#0369A1"/>
+      <!-- Water Reflection line -->
+      <line x1="-5" y1="-25" x2="-5" y2="15" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+      <!-- Recycle triangle on bottle -->
+      <polygon points="0,-8 5,0 -5,0" fill="#FFFFFF" opacity="0.9"/>
+    </g>
+
+    <!-- Metal Soda Can (Right-Front) -->
+    <g transform="translate(48, 25)">
+      <rect x="-12" y="-28" width="24" height="45" rx="5" fill="#94A3B8"/>
+      <ellipse cx="0" cy="-28" rx="12" ry="4" fill="#CBD5E1"/>
+      <ellipse cx="0" cy="17" rx="12" ry="4" fill="#64748B"/>
+      <!-- Red stripe label on can -->
+      <rect x="-12" y="-14" width="24" height="18" fill="#EF4444"/>
+    </g>
+
+    <!-- Floating Badges: Pelet Plastik & Daur Ulang -->
+    <g transform="translate(-85, -25)">
+      <rect x="-40" y="-12" width="80" height="24" rx="12" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
+      <text x="0" y="4" fill="#0369A1" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">♻️ Pelet Plastik</text>
+    </g>
+    <g transform="translate(85, -25)">
+      <rect x="-38" y="-12" width="76" height="24" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="1.5"/>
+      <text x="0" y="4" fill="#B45309" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">📦 Bubur Kertas</text>
+    </g>
+  </g>
+</svg>
+
