@@ -9,6 +9,7 @@ import { DbPickupRequest } from '@/types'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { WawiCharacter } from '@/components/mascot/WawiCharacter'
 import {
   Coins,
   Scale,
@@ -137,25 +138,33 @@ export default function WargaDashboardPage() {
 
   return (
     <div className="space-y-6">
-      {/* Welcome Banner */}
-      <div className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-green-50/60 p-6 shadow-xs">
+      {/* Welcome Banner with WAWI Mascot */}
+      <div className="rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-green-50/60 p-5 sm:p-6 shadow-xs relative overflow-hidden">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs font-semibold text-emerald-800 uppercase tracking-wider">
-                Bank Sampah Digital • Portal Nasabah
-              </span>
+          <div className="flex items-center gap-4">
+            <div className="shrink-0 p-1 bg-white/90 rounded-2xl border border-emerald-100 shadow-xs">
+              <WawiCharacter mood="wave" size={72} />
             </div>
-            <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 mt-1">
-              Halo, {profile?.full_name || 'Nasabah WasteWise'}!
-            </h1>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Partisipasi aktif Anda dalam memilah sampah menciptakan sirkular ekonomi nyata dan lingkungan bersih.
-            </p>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-xs font-semibold text-emerald-800 uppercase tracking-wider">
+                  Bank Sampah Digital • Portal Nasabah
+                </span>
+                <span className="text-[10px] bg-emerald-100 text-emerald-700 font-bold px-2 py-0.5 rounded-full">
+                  WAWI Aktif
+                </span>
+              </div>
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 mt-1">
+                Halo, {profile?.full_name || 'Nasabah WasteWise'}!
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
+                WAWI siap mendampingi kamu memilah sampah dan mengumpulkan reward sirkular ekonomi hari ini 🌱
+              </p>
+            </div>
           </div>
           <Link href="/warga/ajukan">
-            <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold text-xs h-10 px-5 rounded-xl gap-2 shadow-xs shrink-0">
+            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs h-10 px-5 rounded-xl gap-2 shadow-xs shrink-0">
               <CalendarPlus className="h-4 w-4" />
               <span>Ajukan Penjemputan Baru</span>
             </Button>
@@ -462,15 +471,15 @@ export default function WargaDashboardPage() {
           </CardContent>
         </Card>
       ) : (
-        <Card className="border-dashed border-slate-300 bg-white/70 shadow-xs">
+        <Card className="border-dashed border-emerald-300/80 bg-gradient-to-b from-white to-emerald-50/20 shadow-xs">
           <CardContent className="p-8 text-center space-y-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700 mx-auto">
-              <Truck className="h-6 w-6" />
+            <div className="flex justify-center mx-auto">
+              <WawiCharacter mood="thinking" size={85} />
             </div>
             <div className="space-y-1 max-w-md mx-auto">
               <h3 className="text-sm font-bold text-slate-900">Belum Ada Penjemputan Aktif</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Anda belum memiliki tiket penjemputan yang sedang diproses. Kumpulkan sampah terpilah Anda dan ajukan penjemputan armada sekarang.
+                Kata WAWI: Belum ada jadwal penjemputan sampahmu saat ini. Pilah sampah rumah tanggamu dan jadwalkan armada Bank Sampah yuk! 🌱
               </p>
             </div>
             <div className="pt-2">

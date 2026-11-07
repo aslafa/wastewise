@@ -34,7 +34,7 @@ interface AssignedPickup {
   time_slot: string
   category: 'Organik' | 'Anorganik' | 'B3'
   estimated_kg: number
-  status: 'assigned' | 'on_the_way' | 'arrived' | 'completed'
+  status: 'pending' | 'assigned' | 'on_the_way' | 'arrived' | 'completed'
   notes?: string
 }
 
@@ -119,7 +119,7 @@ export default function PetugasTugasPage() {
               address: t.address,
               scheduled_date: t.scheduled_date,
               time_slot: t.time_slot,
-              category: 'Anorganik',
+              category: (t.category as AssignedPickup['category']) || 'Anorganik',
               estimated_kg: t.estimated_kg,
               status: (t.status as AssignedPickup['status']) || 'assigned',
               notes: t.notes,
@@ -138,10 +138,15 @@ export default function PetugasTugasPage() {
     }
   }, [user, profile])
 
-  const handleUpdateStatus = (id: string, newStatus: AssignedPickup['status']) => {
+  const handleUpdateStatus = async (id: string, newStatus: AssignedPickup['status']) => {
     setTasks(prev =>
       prev.map(t => (t.id === id ? { ...t, status: newStatus } : t))
     )
+    try {
+      await wasteService.updatePickupStatus(id, newStatus)
+    } catch (err) {
+      console.warn('Gagal update status penjemputan:', err)
+    }
   }
 
   const filteredTasks = tasks.filter(t => {
@@ -275,19 +280,23 @@ export default function PetugasTugasPage() {
                     <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full border ${
                       task.status === 'completed'
                         ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
-                        : task.status === 'on_the_way'
-                        ? 'bg-sky-50 text-sky-800 border-sky-200'
                         : task.status === 'arrived'
                         ? 'bg-amber-50 text-amber-800 border-amber-200'
-                        : 'bg-slate-50 text-slate-700 border-slate-200'
+                        : task.status === 'on_the_way'
+                        ? 'bg-blue-50 text-blue-800 border-blue-200'
+                        : task.status === 'assigned'
+                        ? 'bg-sky-50 text-sky-800 border-sky-200'
+                        : 'bg-amber-50 text-amber-700 border-amber-200'
                     }`}>
                       {task.status === 'completed'
                         ? 'Telah Selesai'
-                        : task.status === 'on_the_way'
-                        ? 'Sedang Menuju Lokasi'
                         : task.status === 'arrived'
                         ? 'Tiba di Lokasi Warga'
-                        : 'Menunggu Keberangkatan'}
+                        : task.status === 'on_the_way'
+                        ? 'Sedang Menuju Lokasi'
+                        : task.status === 'assigned'
+                        ? 'Tugas Diterima'
+                        : 'Menunggu Petugas'}
                     </span>
                   </div>
 
@@ -322,6 +331,17 @@ export default function PetugasTugasPage() {
 
                 {/* Right: Operational Action Buttons */}
                 <div className="flex flex-wrap lg:flex-col items-center lg:items-end gap-2 shrink-0">
+                  {task.status === 'pending' && (
+                    <Button
+                      size="sm"
+                      onClick={() => handleUpdateStatus(task.id, 'assigned')}
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs h-9 rounded-xl gap-1.5"
+                    >
+                      <CheckCircle2 className="h-3.5 w-3.5" />
+                      <span>Terima & Ambil Tugas</span>
+                    </Button>
+                  )}
+
                   {task.status === 'assigned' && (
                     <Button
                       size="sm"
@@ -354,6 +374,18 @@ export default function PetugasTugasPage() {
                         <span>Timbang & Catat Berat</span>
                       </Button>
                     </Link>
+                  )}
+
+                  {task.status === 'arrived' && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleUpdateStatus(task.id, 'completed')}
+                      className="text-xs h-9 rounded-xl border-emerald-300 text-emerald-700 hover:bg-emerald-50 gap-1.5"
+                    >
+                      <CheckCircle2 className="h-3.5 w-3.5" />
+                      <span>Tandai Selesai</span>
+                    </Button>
                   )}
 
                   <a

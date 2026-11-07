@@ -9,10 +9,12 @@ import {
   History,
   Gift,
   Home,
+  Sparkles,
 } from 'lucide-react'
 
 const wargaNavItems: RoleNavItem[] = [
   { label: 'Beranda Warga', href: '/warga', icon: LayoutDashboard },
+  { label: 'Klasifikasi AI', href: '/warga/klasifikasi', icon: Sparkles },
   { label: 'Ajukan Penjemputan', href: '/warga/ajukan', icon: CalendarPlus },
   { label: 'Status Penjemputan', href: '/warga/penjemputan', icon: Truck, badge: '1' },
   { label: 'Riwayat & Poin', href: '/warga/riwayat', icon: History },

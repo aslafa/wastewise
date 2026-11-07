@@ -47,6 +47,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
+import { HeroWawiCard } from '@/components/mascot/HeroWawiCard'
 import {
   Dialog,
   DialogContent,
@@ -392,35 +393,32 @@ export default function PublicHomePage() {
                   - "Poin & Hadiah Nyata"
                   - "Lingkungan Lebih Bersih"
                   - "Ekonomi Lebih Bernilai"
+                  Tinggi terkunci stabil: h-[76px] sm:h-[68px] lg:h-[76px] (zero layout shift)
+                  Pada mobile boleh menjadi 2 baris jika diperlukan tanpa menggeser section.
               */}
               <div className="space-y-1">
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#142B36] tracking-tight leading-tight">
+                <h1 className="text-2xl sm:text-4xl lg:text-[40px] xl:text-[46px] font-black text-[#142B36] tracking-tight leading-snug lg:leading-tight whitespace-normal sm:whitespace-nowrap">
                   Ubah Sampah Menjadi
                 </h1>
-                <div className="min-h-[50px] sm:min-h-[70px] lg:min-h-[78px] flex items-center justify-center lg:justify-start">
-                  <span className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight bg-gradient-to-r from-[#006B45] via-[#009B63] to-[#16A765] bg-clip-text text-transparent">
+                <div className="h-12 sm:h-14 lg:h-16 flex items-center justify-center lg:justify-start">
+                  <span className="text-2xl sm:text-4xl lg:text-[40px] xl:text-[46px] font-black tracking-tight leading-snug lg:leading-tight bg-gradient-to-r from-[#006B45] via-[#009B63] to-[#16A765] bg-clip-text text-transparent whitespace-normal sm:whitespace-nowrap">
                     <TypewriterEffect
                       words={[
-                        'Poin & Hadiah Nyata',
                         'Lingkungan Lebih Bersih',
+                        'Poin & Hadiah Nyata',
                         'Ekonomi Lebih Bernilai',
                       ]}
                       typingSpeed={85}
                       deletingSpeed={45}
                       pauseDuration={2400}
                       className="bg-gradient-to-r from-[#006B45] via-[#009B63] to-[#16A765] bg-clip-text text-transparent inline-block"
-                      cursorClassName="bg-[#009B63] w-[4px] h-[0.9em]"
+                      cursorClassName="bg-[#009B63] w-[3px] sm:w-[4px] h-[0.9em]"
                     />
                   </span>
                 </div>
               </div>
 
-              {/* Clean Static Sub-Headline (Tanpa Animasi Mengetik) */}
-              <p className="text-xs sm:text-sm font-bold text-[#006B45] tracking-wide uppercase">
-                Platform Terpadu Pengelolaan Sampah Cerdas, Transparan, dan Bernilai Nyata
-              </p>
-
-              {/* Description Body */}
+              {/* Description Body (Teks promosi statis berulang telah dihapus) */}
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 WasteWise membantu masyarakat memilah sampah menggunakan teknologi AI langsung dari perangkat, mengajukan penjemputan, dan mencatat hasil penimbangan secara transparan. Setiap sampah yang terkumpul dapat menghasilkan poin reward, sementara material yang telah dipilah berpeluang disalurkan untuk didaur ulang atau diolah menjadi produk bernilai ekonomi.
               </p>
@@ -467,48 +465,9 @@ export default function PublicHomePage() {
               </div>
             </div>
 
-            {/* Right Column: Visual Centerpiece Illustration + Floating Badges */}
+            {/* Right Column: Maskot Resmi WAWI (Menggantikan gambar sampah) */}
             <div className="lg:col-span-5 relative flex items-center justify-center">
-              {/* Decorative back plate */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#DDF7EA] to-white rounded-3xl -rotate-2 scale-95 border border-emerald-200/80 shadow-md -z-10" />
-
-              {/* Main Card Frame */}
-              <div className="relative w-full max-w-md bg-white rounded-3xl border border-emerald-200 p-5 sm:p-6 shadow-xl shadow-emerald-900/5">
-                {/* SVG Illustration Container */}
-                <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden bg-[#F3FAF6] border border-emerald-100/90 flex items-center justify-center p-3">
-                  <Image
-                    src="/illustrations/hero-eco.svg"
-                    alt="Ilustrasi Ekosistem Cerdas WasteWise"
-                    width={400}
-                    height={290}
-                    priority
-                    unoptimized
-                    className="object-contain"
-                  />
-                </div>
-
-                {/* Floating Badge Top-Left: +100 Poin Organik */}
-                <div className="absolute -top-3.5 -left-3.5 sm:-left-4 bg-white rounded-2xl border border-amber-200 px-3.5 py-2 shadow-lg flex items-center gap-2.5 animate-float">
-                  <div className="h-8 w-8 rounded-xl bg-gradient-to-tr from-[#D97706] to-[#F59E0B] flex items-center justify-center text-white shadow-xs">
-                    <Coins className="h-4 w-4" />
-                  </div>
-                  <div className="text-left">
-                    <span className="text-[10px] font-bold text-slate-400 block uppercase">Reward Baru</span>
-                    <span className="text-xs font-black text-[#92400E]">+100 Poin / Kg</span>
-                  </div>
-                </div>
-
-                {/* Floating Badge Bottom-Right: AI Classifier Valid */}
-                <div className="absolute -bottom-3.5 -right-3.5 sm:-right-4 bg-white rounded-2xl border border-emerald-200 px-3.5 py-2 shadow-lg flex items-center gap-2.5 animate-float-slow">
-                  <div className="h-8 w-8 rounded-xl bg-[#009B63] flex items-center justify-center text-white shadow-xs">
-                    <Sparkles className="h-4 w-4" />
-                  </div>
-                  <div className="text-left">
-                    <span className="text-[10px] font-bold text-slate-400 block uppercase">Klasifikasi AI</span>
-                    <span className="text-xs font-black text-[#006B45]">AI: Organik 98% Valid</span>
-                  </div>
-                </div>
-              </div>
+              <HeroWawiCard />
             </div>
           </div>
         </div>
